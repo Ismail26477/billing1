@@ -226,7 +226,7 @@ function LockScreen({ email, isUnlocked, recoveryMode, onUnlock, onRecoveryDone,
           'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
           'X-Client-Info': 'billing-app',
         },
-        body: JSON.stringify({ email, redirectUrl: `${window.location.origin}${window.location.pathname}` }),
+body: JSON.stringify({ email, redirectUrl: `https://billing1-topaz.vercel.app${window.location.pathname}` }),
       });
       const result = await response.json();
       setBusy(false);
